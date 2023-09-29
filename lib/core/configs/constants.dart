@@ -45,13 +45,13 @@ const double kBottomNavBarHeight = 60.0;
 
 //! Colors
 const Color kPrimaryColor = Color(0xffF90606);
-const Color lightScaffoldBackgroundColor = Color(0xffF9FAFB);
+const Color lightScaffoldBackgroundColor = kWhite;
 const Color kTextColorsLight = Color(0xFF121619);
 const Color navBarIconsInActiveColor = Color(0xff98A2B3);
 const Color kWhite = Color(0xFFFFFFFF);
 const Color kBlack = Color(0xFF000000);
 const Color kError = Color(0xFFF04438);
-const Color kGrey = Color(0xff8798A7);
+const Color kGrey = Color(0xff5B6C7C);
 const Color kWarning = Color(0xfff79009);
 const Color kTransparent = Colors.transparent;
 const Color kSuccess = Color(0xFF12B76A);

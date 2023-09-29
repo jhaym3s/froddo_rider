@@ -9,7 +9,10 @@ class CustomBackButton extends StatelessWidget {
     return GestureDetector(
           onTap: onTap,
           child: 
-          const Icon(Icons.arrow_back_ios_new, size: 16,),
+          const CircleAvatar(
+            radius: 16,
+            backgroundColor: Color(0xffF1F3F5),
+            child:  Icon(Icons.arrow_back, size: 18,color: Color(0xff37414A),)),
           );
   }
 }

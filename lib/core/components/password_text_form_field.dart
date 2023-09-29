@@ -63,7 +63,7 @@ class PasswordTextFormField extends StatelessWidget {
                   onPressed: suffixFunction,
                   icon: Icon(
                     hidePassword
-                        ? Icons.visibility_outlined
+                        ? Icons.visibility
                         : Icons.visibility_off_outlined,
                     color: const Color(0xFF1C1C1E),
                     size: 16,
@@ -79,11 +79,11 @@ class PasswordTextFormField extends StatelessWidget {
                 contentPadding: EdgeInsets.symmetric(vertical: 20.0.dy, horizontal: 10.0.dx), 
          // border: InputBorder.none, 
           focusedBorder: OutlineInputBorder(
-          borderSide: const BorderSide(color: Color(0xffEAECF0)),
+          borderSide: const BorderSide(color: Color(0xffD4DAE0)),
           borderRadius: BorderRadius.circular(8),
         ),
         enabledBorder: OutlineInputBorder(
-          borderSide: const BorderSide(color: Color(0xffEAECF0)),
+          borderSide: const BorderSide(color: Color(0xffD4DAE0)),
           borderRadius: BorderRadius.circular(8),
         ),
            border: InputBorder.none),

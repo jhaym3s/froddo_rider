@@ -37,7 +37,7 @@ class NormalTextFormField extends StatelessWidget {
           style: Theme.of(context).textTheme.bodyLarge!.copyWith(
               fontWeight: FontWeight.w400,
               fontSize: 16.sp,
-              color: const Color(0xff1C1C1E)),
+              color: const Color(0xff5B6C7C)),
         ),
         SpaceY(4.dy),
         TextFormField(
@@ -64,11 +64,11 @@ class NormalTextFormField extends StatelessWidget {
                 contentPadding: EdgeInsets.symmetric(vertical: 20.0.dy, horizontal: 10.0.dx), 
          // border: InputBorder.none, 
           focusedBorder: OutlineInputBorder(
-          borderSide: const BorderSide(color: Color(0xffEAECF0)),
+          borderSide: const BorderSide(color: Color(0xffD4DAE0)),
           borderRadius: BorderRadius.circular(8),
         ),
         enabledBorder: OutlineInputBorder(
-          borderSide: const BorderSide(color: Color(0xffEAECF0)),
+          borderSide: const BorderSide(color: Color(0xffD4DAE0)),
           borderRadius: BorderRadius.circular(8),
         ),
              border: InputBorder.none,
