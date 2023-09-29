@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 
 import 'core/configs/configs.dart';
 import 'core/router/app_route.dart';
-import 'feature/authentication/onboarding_screen.dart';
 import 'feature/authentication/splash_screen.dart';
 
 void main() {
@@ -23,7 +22,7 @@ class MyApp extends StatelessWidget {
       darkTheme: AppTheme().lightTheme,
       home: 
       //const CustomNavigationBar(),
-       const OnboardingScreen(),
+       const SplashScreen(),
       onGenerateRoute: AppRouter.onGenerated,
       builder: (context, widget){
         final media = MediaQuery.of(context);

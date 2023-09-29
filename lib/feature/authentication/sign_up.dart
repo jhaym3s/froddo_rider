@@ -40,6 +40,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                         fontSize: 21.sp,
                         fontWeight: FontWeight.w700,
                         color: kTextColorsLight)),
+            SpaceY(8.dy),
             Text("Create an account in few minutes.",
                 style: Theme.of(context).textTheme.bodyLarge!.copyWith(
                         fontSize: 16.sp,
@@ -108,7 +109,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                         ],
                        ),
                        SpaceY(40.dy),
-                      Container(
+                       Container(
                         height: 60.dy, width: kScreenWidth(context),
                         decoration: BoxDecoration(
                           border: Border.all(color:const Color(0xffF1F3F5)),
@@ -128,7 +129,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                         ),
                       ),
                       SpaceY(32.dy),
-                Center(
+                      Center(
                   child: RichText(
                             text: TextSpan(
                               text: 'I have an account already ',

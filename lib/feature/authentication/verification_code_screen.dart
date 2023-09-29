@@ -3,17 +3,16 @@ import 'package:flutter/material.dart';
 import 'package:froddo_rider/core/components/components.dart';
 import 'package:froddo_rider/core/configs/configs.dart';
 import 'package:froddo_rider/core/router/router.dart';
-import 'package:froddo_rider/feature/authentication/verification_code_screen.dart';
 
-class EnterNumberScreen extends StatefulWidget {
-  static const routeName = "enterNumber";
-  const EnterNumberScreen({super.key});
+class VerificationCodeScreen extends StatefulWidget {
+  static const routeName = "verificationCodeScreen";
+  const VerificationCodeScreen({super.key});
 
   @override
-  State<EnterNumberScreen> createState() => _EnterNumberScreenState();
+  State<VerificationCodeScreen> createState() => _VerificationCodeScreenState();
 }
 
-class _EnterNumberScreenState extends State<EnterNumberScreen> {
+class _VerificationCodeScreenState extends State<VerificationCodeScreen> {
   final numberController = TextEditingController();
   bool hidePassword = true;
   @override
@@ -31,13 +30,13 @@ class _EnterNumberScreenState extends State<EnterNumberScreen> {
                 moveToOldScreen(context: context);
               }),
               SpaceY(24.dy),
-              Text("Enter your phone number",
+              Text("Enter verification code",
                 style: Theme.of(context).textTheme.bodyLarge!.copyWith(
                         fontSize: 21.sp,
                         fontWeight: FontWeight.w700,
                         color: kTextColorsLight)),
-            SpaceY(8.dy),
-            Text("We’ll text a code to verify your number",
+              SpaceY(8.dy),
+            Text("We have sent a code to +234806****733",
                 style: Theme.of(context).textTheme.bodyLarge!.copyWith(
                         fontSize: 16.sp,
                         fontWeight: FontWeight.w400,
@@ -55,34 +54,30 @@ class _EnterNumberScreenState extends State<EnterNumberScreen> {
                     return null;
                   },
                 ),
-                     SpaceY(22.dy),
-                       CustomElevatedButton(onPressed: (){
-                        moveToNextScreen(context: context, page: VerificationCodeScreen.routeName);
-                       }, buttonText: "Next"),
-                       SpaceY(40.dy),
-                Center(
-                  child: RichText(
-                    textAlign: TextAlign.center,
-                            text: TextSpan(
-                              text: 'Joining our app means you agree with our ',
+                     SpaceY(24.dy),
+                       CustomElevatedButton(onPressed: (){}, buttonText: "Next"),
+                SpaceY(40.dy),
+                Center(child: 
+                RichText(text: TextSpan(
+                              text: '60:00 seconds ',
                               style: Theme.of(context)
                                   .textTheme
                                   .bodyMedium!
                                   .copyWith(
                                       fontWeight: FontWeight.w400,
-                                      fontSize: 12.sp,
-                                      color: const Color(0xff5B6C7C)),
+                                      fontSize: 16.sp,
+                                      color: kTextColorsLight),
                               children: [
                                 TextSpan(
-                                  text: 'Terms of Use and Privacy Policy',
+                                  text: 'Resend code',
                                   style: Theme.of(context)
                                       .textTheme
                                       .bodyMedium!
                                       .copyWith(
-                                        fontWeight: FontWeight.w500,
-                                        fontSize: 12.sp,
-                                        color: const Color(0xff5B6C7C),
-                                        decoration: TextDecoration.underline,
+                                        fontWeight: FontWeight.w700,
+                                        fontSize: 16.sp,
+                                        color: Color(0xffF9A9A9),
+                                       // decoration: TextDecoration.underline,
                                       ),
                                   recognizer: TapGestureRecognizer()
                                     ..onTap = () {
