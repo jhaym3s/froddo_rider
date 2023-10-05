@@ -43,9 +43,10 @@ class _SignUpScreenState extends State<SignUpScreen> {
             SpaceY(8.dy),
             Text("Create an account in few minutes.",
                 style: Theme.of(context).textTheme.bodyLarge!.copyWith(
-                        fontSize: 16.sp,
-                        fontWeight: FontWeight.w400,
-                        color: kGrey)),
+                fontSize: 16.sp,
+                fontWeight: 
+                FontWeight.w400,
+                color: kGrey)),
                SpaceY(38.dy),
             NormalTextFormField(
                       controller: firstNameController,

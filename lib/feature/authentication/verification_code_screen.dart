@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:froddo_rider/core/components/components.dart';
 import 'package:froddo_rider/core/configs/configs.dart';
 import 'package:froddo_rider/core/router/router.dart';
+import 'package:froddo_rider/feature/main/screens/enable_locations.dart';
 
 class VerificationCodeScreen extends StatefulWidget {
   static const routeName = "verificationCodeScreen";
@@ -13,7 +14,7 @@ class VerificationCodeScreen extends StatefulWidget {
 }
 
 class _VerificationCodeScreenState extends State<VerificationCodeScreen> {
-  final numberController = TextEditingController();
+  final numberCodeController = TextEditingController();
   bool hidePassword = true;
   @override
   Widget build(BuildContext context) {
@@ -42,20 +43,12 @@ class _VerificationCodeScreenState extends State<VerificationCodeScreen> {
                         fontWeight: FontWeight.w400,
                         color: kGrey)),
                SpaceY(38.dy),
-                NormalTextFormField(
-                  controller: numberController,
-                  labelText: "Phone Number",
-                  hintText: "2349012345678",
-                  inputFormatters: const [],
-                  validator: (String? value) {
-                    if (value == null || value.isEmpty) {
-                      return 'Please enter your number';
-                    }
-                    return null;
-                  },
-                ),
+               CustomPinCodeTextField(controller: numberCodeController, onSaved: (String ) {  }, onSubmitted: (String ) {  }, onComplete: (String ) {  },),
+    
                      SpaceY(24.dy),
-                       CustomElevatedButton(onPressed: (){}, buttonText: "Next"),
+                       CustomElevatedButton(onPressed: (){
+                        moveToNextScreen(context: context, page: EnableLocationScreen.routeName);
+                       }, buttonText: "Verify account"),
                 SpaceY(40.dy),
                 Center(child: 
                 RichText(text: TextSpan(

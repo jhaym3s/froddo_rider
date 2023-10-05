@@ -3,6 +3,9 @@ import 'package:froddo_rider/feature/authentication/enter_number_screen.dart';
 import 'package:froddo_rider/feature/authentication/onboarding_screen.dart';
 import 'package:froddo_rider/feature/authentication/sign_up.dart';
 import 'package:froddo_rider/feature/authentication/verification_code_screen.dart';
+import 'package:froddo_rider/feature/main/screens/enable_locations.dart';
+import 'package:froddo_rider/feature/main/screens/home_screen.dart';
+import 'package:froddo_rider/feature/main/screens/location_done.dart';
 
 import '../../feature/authentication/splash_screen.dart';
 
@@ -20,6 +23,14 @@ class AppRouter {
         return MaterialPageRoute(builder: (_) => const EnterNumberScreen());
         case VerificationCodeScreen.routeName:
         return MaterialPageRoute(builder: (_) => const VerificationCodeScreen());
+       case EnableLocationScreen.routeName:
+        return MaterialPageRoute(builder: (_) => const EnableLocationScreen());
+      case LocationDoneScreen.routeName:
+        return MaterialPageRoute(builder: (_) => const LocationDoneScreen());
+        case HomeScreen.routeName:
+        return MaterialPageRoute(builder: (_) => const HomeScreen());
+
+
         
       default:
         return onError();
