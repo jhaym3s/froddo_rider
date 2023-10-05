@@ -1,8 +1,8 @@
-import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:froddo_rider/core/configs/configs.dart';
+import 'package:froddo_rider/feature/main/home/widgets/order_cards.dart';
 
-import '../../../core/components/components.dart';
+import '../../../../core/components/components.dart';
 
 class HomeScreen extends StatefulWidget {
   static const routeName = "homeScreen";
@@ -117,7 +117,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                     SpaceY(20.dy),
                     Expanded(
                       child: ListView.builder(
-                        padding: EdgeInsets.all(0),
+                        padding: const EdgeInsets.all(0),
                         itemBuilder: (context,index){
                         return const AvailableOrderCard();
                       }),
@@ -127,12 +127,40 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                  ),
                ),
                //!
-                Column(
-                children: [
-                  Container(
-                    
-                  )
-                ],
+                 Padding(
+                 padding:  EdgeInsets.symmetric(horizontal: 24.dx),
+                 child: Column(
+                  children: [
+                    SpaceY(24.dy),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Text(
+                'Today',
+                style: Theme.of(context).textTheme.bodyLarge!.copyWith(
+                    fontSize: 12.sp,
+                    fontWeight: FontWeight.w400,
+                    color: const Color(0xff8798A7)),
+              ),
+              Text(
+                '5/10 Completed',
+                style: Theme.of(context).textTheme.bodyLarge!.copyWith(
+                    fontSize: 12.sp,
+                    fontWeight: FontWeight.w400,
+                    color: const Color(0xff333333)),
+              ),
+                      ],
+                    ),
+                    SpaceY(16.dy),
+                    Expanded(
+                      child: ListView.builder(
+                        padding: const EdgeInsets.all(0),
+                        itemBuilder: (context,index){
+                        return const AcceptedOrderCard();
+                      }),
+                    ),
+                  ],
+                 ),
                ),
               ],
             ),
@@ -143,89 +171,4 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
   }
 }
 
-class AvailableOrderCard extends StatelessWidget {
-  const AvailableOrderCard({
-    super.key,
-  });
 
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      margin: EdgeInsets.only(bottom: 16.dy),
-      padding: EdgeInsets.symmetric(horizontal: 20.dx,vertical: 20.dy),
-    decoration: BoxDecoration(
-      border: Border.all(color: const Color(0xffF1F3F5)),
-      borderRadius: BorderRadius.circular(8)
-    ),
-    child: Column(
-      children: [
-        Row(
-          mainAxisAlignment: MainAxisAlignment.start,
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Image.asset(AssetsImages.googleLogo,height: 24.dy, width: 24.dx,),
-            SpaceX(16.dx),
-            Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(
-                  'Food Delivery',
-                  style: Theme.of(context).textTheme.bodyLarge!.copyWith(
-      fontSize: 16.sp,
-      fontWeight: FontWeight.w700,
-      color: const Color(0xff333333)),
-                 ),
-        Text(
-                  '49 imo okoro streets, Ajah, Lagos',
-                  style: Theme.of(context).textTheme.bodyLarge!.copyWith(
-      fontSize: 12.sp,
-      fontWeight: FontWeight.w400,
-      color: const Color(0xff333333)),
-             ),
-            SpaceY(4.dy),
-       RichText(
-            text: TextSpan(
-              text: 'Delivery time: ',
-              style: Theme.of(context)
-                  .textTheme
-                  .bodyMedium!
-                  .copyWith(
-                      fontWeight: FontWeight.w400,
-                      fontSize: 12.sp,
-                      color: kGrey),
-              children: [
-                TextSpan(
-                  text: '20mins',
-                  style: Theme.of(context)
-                      .textTheme
-                      .bodyMedium!
-                      .copyWith(
-                        fontWeight: FontWeight.w700,
-                        fontSize: 12.sp,
-                        color: kTextColorsLight,
-                       // decoration: TextDecoration.underline,
-                      ),
-                  recognizer: TapGestureRecognizer()
-                    ..onTap = () {
-                     // moveAndClearStack(context: context, page: SignInScreen.routeName);
-                      // moveToNextScreen(
-                      // context: context,
-                      // page: SignInScreen.routeName);
-                   },
-                ),
-              ],
-            ),
-          ),
-              ],
-            ),
-             Spacer(),
-             const Icon(Icons.arrow_forward_ios, size: 16,color: Color(0xff999999),)
-          ],
-        ),
-        SpaceY(4.dy),
-         
-      ],
-    ),
-    );
-  }
-}

@@ -3,9 +3,9 @@ import 'package:froddo_rider/feature/authentication/enter_number_screen.dart';
 import 'package:froddo_rider/feature/authentication/onboarding_screen.dart';
 import 'package:froddo_rider/feature/authentication/sign_up.dart';
 import 'package:froddo_rider/feature/authentication/verification_code_screen.dart';
-import 'package:froddo_rider/feature/main/screens/enable_locations.dart';
-import 'package:froddo_rider/feature/main/screens/home_screen.dart';
-import 'package:froddo_rider/feature/main/screens/location_done.dart';
+import 'package:froddo_rider/feature/main/home/screens/enable_locations.dart';
+import 'package:froddo_rider/feature/main/home/screens/home_screen.dart';
+import 'package:froddo_rider/feature/main/home/screens/location_done.dart';
 
 import '../../feature/authentication/splash_screen.dart';
 

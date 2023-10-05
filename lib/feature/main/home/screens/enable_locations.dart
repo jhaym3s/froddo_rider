@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:froddo_rider/core/router/router.dart';
-import 'package:froddo_rider/feature/main/screens/location_done.dart';
-import '../../../core/configs/configs.dart';
+import 'package:froddo_rider/feature/main/home/screens/location_done.dart';
+import '../../../../core/configs/configs.dart';
 
 class EnableLocationScreen extends StatefulWidget {
   static const routeName = "enableLocation";

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:froddo_rider/core/components/components.dart';
 import 'package:froddo_rider/core/router/router.dart';
-import 'package:froddo_rider/feature/main/screens/home_screen.dart';
-import '../../../core/configs/configs.dart';
+import 'package:froddo_rider/feature/main/home/screens/home_screen.dart';
+import '../../../../core/configs/configs.dart';
 
 class LocationDoneScreen extends StatefulWidget {
   static const routeName = "locationDonScreen";

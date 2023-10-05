@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:froddo_rider/core/components/components.dart';
 import 'package:froddo_rider/core/configs/configs.dart';
 import 'package:froddo_rider/core/router/router.dart';
-import 'package:froddo_rider/feature/main/screens/enable_locations.dart';
+import 'package:froddo_rider/feature/main/home/screens/enable_locations.dart';
 
 class VerificationCodeScreen extends StatefulWidget {
   static const routeName = "verificationCodeScreen";
