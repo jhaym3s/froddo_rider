@@ -86,7 +86,6 @@ class ProfileTile extends StatelessWidget {
   });
   final String image, title;
   final void Function()? onTap;
-
   @override
   Widget build(BuildContext context) {
     return GestureDetector(

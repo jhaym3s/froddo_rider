@@ -13,4 +13,5 @@ class AssetsImages {
   static const verifyVehicle = "assets/images/verify_vehicle.png";
   static const about = "assets/images/about.png";
   static const logout='assets/images/logout.png';
+  static const docs='assets/images/docs.png';
 }

@@ -27,6 +27,7 @@ class _VerifyVehicleState extends State<VerifyVehicle> {
           child: Padding(
             padding:  EdgeInsets.symmetric(horizontal: 24.dx),
             child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 SpaceY(11.dy),
                 Row(
@@ -54,13 +55,75 @@ class _VerifyVehicleState extends State<VerifyVehicle> {
                  SpaceY(16.dy),
                 NormalTextFormField(hintText: "Black", labelText: "Color of the vehicle.", controller: colorController, validator: (String? value){return null;}),
                 SpaceY(36.dy),
-                CustomElevatedButton(onPressed: (){}, buttonText: "Save Changes"),
+               
                 const Divider(),
-                
+                SpaceY(40.dy),
+                Text("Proof of Ownership",
+                 style: Theme.of(context).textTheme.bodyLarge!.copyWith(
+                fontSize: 12.sp,
+                fontWeight: FontWeight.w700,
+                color: kTextColorsLight),),
+                SpaceY(16.dy),
+                ProofTile( title: "Proof of Insurance", onTap: (){}),
+                SpaceY(16.dy),
+                ProofTile( title: "Driver's license", onTap: (){}),
+                SpaceY(16.dy),
+                 CustomElevatedButton(onPressed: (){}, buttonText: "Save Changes"),
 
               ],
             ),
           ),
+        ),
+      ),
+    );
+  }
+}
+
+
+class ProofTile extends StatelessWidget {
+  const ProofTile({
+    super.key, required this.title, required this.onTap
+  });
+  final String  title;
+  final void Function()? onTap;
+  @override
+  Widget build(BuildContext context) {
+    return GestureDetector(
+      onTap: onTap,
+      child: Container(
+        padding: EdgeInsets.symmetric(horizontal: 20.dx),
+        margin: EdgeInsets.only(bottom: 16.dy),
+        height: 48.dy, width: kScreenWidth(context),
+        decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(8),
+        color: const Color(0xffFAFBFC)
+        ),
+        child: Row(
+          children: [
+            Image.asset(AssetsImages.docs, height: 18.dy, width: 18.dx,),
+            SpaceX(8.dx),
+       Text(title,
+       style: Theme.of(context).textTheme.bodyLarge!.copyWith(
+      fontSize: 12.sp,
+      fontWeight: FontWeight.w700,
+      color: const Color(0xff37414A)),),
+      const Spacer(),
+      Container(
+        decoration: BoxDecoration(borderRadius:BorderRadius.circular(4), color: Color(0xff00B74C)),
+        height: 32.dy,width: 81.dx,
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+        const Icon(Icons.file_upload_outlined, color: kWhite,),
+        Text("Upload",
+       style: Theme.of(context).textTheme.bodyLarge!.copyWith(
+      fontSize: 12.sp,
+      fontWeight: FontWeight.w500,
+      color: kWhite),),
+          ],
+        ),
+      )
+          ],
         ),
       ),
     );
