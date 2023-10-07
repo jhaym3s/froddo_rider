@@ -9,3 +9,4 @@ export 'custom_comment_box.dart';
 export 'custom_text_field_without_label.dart';
 export 'custom_pin_code_text_field.dart';
 export 'custom_switch.dart';
+export 'alerts.dart';

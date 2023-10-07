@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:froddo_rider/core/configs/configs.dart';
+import 'package:froddo_rider/core/router/router.dart';
 import 'package:froddo_rider/feature/main/home/widgets/order_cards.dart';
+import 'package:froddo_rider/feature/main/profile/screen/profile_screen.dart';
 
 import '../../../../core/components/components.dart';
 
@@ -40,7 +42,11 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
             color: kBlack,
             child: Row(
               children: [
-               const CircleAvatar(radius: 20,backgroundColor: kWhite,child: Icon(Icons.person,color: Color(0xffCBD2D9),),),
+               GestureDetector(
+                onTap: () {
+                  moveToNextScreen(context: context, page: ProfileScreen.routeName);
+                },
+                child: const CircleAvatar(radius: 20,backgroundColor: kWhite,child: Icon(Icons.person,color: Color(0xffCBD2D9),),)),
                SpaceX(8.dx),
                Text(kDummyName,
                style: Theme.of(context).textTheme.bodyLarge!.copyWith(

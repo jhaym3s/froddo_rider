@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:froddo_rider/core/components/components.dart';
 import 'package:froddo_rider/core/configs/configs.dart';
 // import 'package:froddo_rider/features/dashboard/custom_navigation_bar.dart';
 // import 'package:froddo_rider/features/dashboard/explore/screens/pay_with_card.dart';
@@ -152,40 +151,56 @@ class PaymentListTile extends StatelessWidget {
   }
 }
 
-void showSuccessDialog({required BuildContext context, required VoidCallback onPressed,}){
+void showOrderAcceptedDialog({required BuildContext context, required VoidCallback onPressed,}){
     generalDialog(context: context, 
     children: Container(
       decoration: BoxDecoration(
           color: kWhite,
           borderRadius: BorderRadius.circular(8)
       ),
-      height: 369.dy, width: 350.dx,
+      height: 223.dy, width: 327.dx,
       child: Padding(
         padding:  EdgeInsets.symmetric(horizontal: 20.dx),
         child: Column(
             children: [
-              SpaceY(45.dy),
-              //  Image.asset(AssetsImages.success, height: 120.dy, width: 120.dx,),
-                SpaceY(8.dy),
-                 Text("Submitted successfully",
-                        softWrap: true,
-                        textAlign: TextAlign.center,
-                        style: Theme.of(context).textTheme.bodyLarge!.copyWith(
-                                fontSize: 20.sp,
-                                fontWeight: FontWeight.w700,
-                                color: kTextColorsLight)),
-                  SpaceY(8.dy),
-                  Text("We will get back to you shortly on the next steps to follow.",
+              SpaceY(25.dy),
+              Image.asset(AssetsImages.check, height: 40.dy, width: 40.dx,),
+                SpaceY(4.dy),
+                 Text("Order accepted",
                         softWrap: true,
                         textAlign: TextAlign.center,
                         style: Theme.of(context).textTheme.bodyLarge!.copyWith(
                                 fontSize: 16.sp,
+                                fontWeight: FontWeight.w700,
+                                color: kTextColorsLight)),
+                  SpaceY(4.dy),
+                  Text("You just accepted an order from Chef Nora",
+                        softWrap: true,
+                        textAlign: TextAlign.center,
+                        style: Theme.of(context).textTheme.bodyLarge!.copyWith(
+                                fontSize: 14.sp,
                                 fontWeight: FontWeight.w400,
                                 color: kGrey)),
-                    SpaceY(24.dy),
-                    CustomElevatedButton(onPressed: (){
-                     // moveAndClearStack(context: context, page: CustomNavigationBar.routeName);
-                    }, buttonText: "Back Home"),
+                    SpaceY(16.dy),
+                    Container(
+              height: 44.dy, width: kScreenWidth(context),
+              decoration: BoxDecoration(
+                color: kPrimaryColor,
+                borderRadius: BorderRadius.circular(8),
+              ),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  const Icon(Icons.location_on, color: kWhite,),
+                  Text("View Location on Map",
+               textAlign: TextAlign.center,
+                  style: Theme.of(context).textTheme.bodyLarge!.copyWith(
+                  fontSize: 14.sp,
+                  fontWeight: FontWeight.w400,
+                  color: kWhite)),
+                ],
+              ),
+            ),
                  
             ],
         ),
