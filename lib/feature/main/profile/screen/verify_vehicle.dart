@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:froddo_rider/core/components/components.dart';
 import 'package:froddo_rider/core/configs/dimensions.dart';
 import 'package:froddo_rider/core/router/router.dart';
+import 'package:froddo_rider/feature/main/profile/widget/custom_divider.dart';
 
 import '../../../../core/configs/configs.dart';
 
@@ -56,7 +57,7 @@ class _VerifyVehicleState extends State<VerifyVehicle> {
                 NormalTextFormField(hintText: "Black", labelText: "Color of the vehicle.", controller: colorController, validator: (String? value){return null;}),
                 SpaceY(36.dy),
                
-                const Divider(),
+                const CustomDivider(),
                 SpaceY(40.dy),
                 Text("Proof of Ownership",
                  style: Theme.of(context).textTheme.bodyLarge!.copyWith(

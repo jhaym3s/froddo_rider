@@ -4,6 +4,7 @@ import 'package:froddo_rider/feature/main/profile/screen/edit_profile_screen.dar
 import 'package:froddo_rider/feature/main/profile/screen/verify_vehicle.dart';
 
 import '../../../../core/configs/configs.dart';
+import '../widget/custom_divider.dart';
 import 'change_password_screen.dart';
 
 class ProfileScreen extends StatefulWidget {
@@ -39,7 +40,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 fontWeight: FontWeight.w400,
                 color: const Color(0xff8798A7)),),
                 SpaceY(24.dy),
-                Divider(height: 5.dy,),
+                const CustomDivider(),
                 SpaceY(24.dy),
                 Text("Account preferences",
                  style: Theme.of(context).textTheme.bodyLarge!.copyWith(
@@ -57,7 +58,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                    moveToNextScreen(context: context, page: VerifyVehicle.routeName);
                  }),
                 SpaceY(32.dy),
-                Divider(height: 5.dy,),
+                const CustomDivider(),
                  SpaceY(24.dy),
                 Text("Contact",
                  style: Theme.of(context).textTheme.bodyLarge!.copyWith(
@@ -68,7 +69,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                  ProfileTile(image: AssetsImages.support,title: "Support",onTap: (){}),
                  ProfileTile(image: AssetsImages.about,title: "About",onTap: (){}),
                 SpaceY(8.dy),
-                Divider(height: 5.dy,),
+                const CustomDivider(),
                 SpaceY(24.dy),
                 const LogoutTile(),
                 SpaceY(54.dy),
